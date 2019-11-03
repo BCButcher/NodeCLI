@@ -1,0 +1,24 @@
+{
+  "name": "nodecli",
+  "version": "1.0.0",
+  "description": "NodeCLI Homework",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcbutcher/nodecli.git"
+  },
+  "author": "Brian C Butcher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcbutcher/nodecli/issues"
+  },
+  "homepage": "https://github.com/bcbutcher/nodecli#readme",
+  "dependencies": {
+    "commander": "^4.0.0",
+    "express": "^4.17.1",
+    "inquirer": "^7.0.0"
+  }
+}

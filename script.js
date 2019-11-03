@@ -1,64 +1,64 @@
-const express = require ("express");
-const inquirer = require("inquirer");
+'use strict';
+var inquirer = require('..');
 
-const defineItem = [
-  {
-        type: 'input',
-        name: 'welcome_intro',
-        message: "Thank for using 'TeamBuild.com' to build your team. Press enter to continue..."
-    },
+var questions = [
     {
-        type: 'input',
-        name: 'manager_messge',
-        message: 'To start, please confirm whether you are the team manager or acting on the team managers behalf',
-        choices: ["I am the team manager", "I am acting on behalf of the team manager"],
-        validate: async (choices) => {
-          if (choices = "I am the team manager") {
-            return "Please enter a valid amount.";
-          }
-            return true;
-        }
-    },
-    {
-        type: 'input',
-        name: 'manager_first_name',
-        message: 'Please enter the team managers first name'
-    },
-    {
-        type: 'input',
-        name: 'manager_last_name',
-        message: 'Please enter the team managers last name'
-    },
-    {
-        type: 'checkbox',
-        name: 'manager_title',
-        message: 'Please enter the team managers job title'
-    },
-    {
-        type: 'input',
-        name: 'behalf_first_name',
-        message: 'Please enter the team managers first name'
+    type: 'input',
+    value: 'ques0',
+    name: 'welcome',
+    message: "Thank for buidling with 'TheDudeTeam. Press enter to continue..."
     },
     {
     type: 'input',
-    name: 'starting_bid',
-    message: 'Please enter a starting bid',
-    validate: async (input) => {
-      if (isNaN(input)) {
-        return "Please enter a valid amount.";
-      }
-      return true;
-    }
-  },
+    value: 'ques1',
+    name: 'manager_first',
+    message: 'Please enter your first name:'
+    },
     {
-      type: 'input',
-      name: 'reserve_bid',
-      message: '(Optional) Please enter a reserve bid',
-      validate: async (input) => {
-        if (isNaN(input)) {
-          return "Please enter a valid amount.";
+    type: 'input',
+    value: 'ques2',
+    name: 'manager_last',
+    message: 'Please enter your last name:'
+    },
+    {
+    type: 'input',
+    value: 'ques3',
+    name: 'manager_title',
+    message: 'Please enter your job title:'
+    },
+    {
+    type: 'confirm',
+    value: 'ques4',
+    name: 'team_members',
+    message: 'Would you like to enter your team members now?'
+    },
+    {
+    type: 'input',
+    value: 'ques5',
+    name: 'members_first',
+    message: 'Please enter the team members first name:'
+    },
+    {
+    type: 'input',
+    name: 'members_last',
+    value: 'ques6',
+    message: 'Please enter the team members last name:'
+    },
+    {
+    type: 'checkbox',
+    name: 'intern_engineer',
+    message: 'Is this team member an engineer or intern',
+    choices: [
+      {value: 'engineer', name: 'Engineer'},
+      {value: 'intern', name: 'Intern'}        
+      ],
+        filter: function (val) {
+          return val.toLowerCase();
         }
-        return true;
-      }
-  }
-]
+    }
+  ];
+
+inquirer.prompt(questions).then(answers => {
+  console.log('Send the HTML:');
+  console.log(JSON.stringify(answers, null, '  '));
+});
