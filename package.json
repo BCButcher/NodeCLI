@@ -1,24 +1,27 @@
 {
-  "name": "nodecli",
-  "version": "1.0.0",
-  "description": "NodeCLI Homework",
-  "main": "script.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bcbutcher/nodecli.git"
-  },
-  "author": "Brian C Butcher",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bcbutcher/nodecli/issues"
-  },
-  "homepage": "https://github.com/bcbutcher/nodecli#readme",
-  "dependencies": {
-    "commander": "^4.0.0",
-    "express": "^4.17.1",
-    "inquirer": "^7.0.0"
-  }
+    "name": "developer_profile_generator",
+    "version": "1.0.0",
+    "description": "Developer Profile Generator Homework",
+    "main": "script.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bcbutcher/developer_profile_generator.git"
+    },
+    "author": "Brian C Butcher",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/bcbutcher/developer_profile_generator/issues"
+    },
+    "homepage": "https://github.com/bcbutcher/developer_profile_generator#readme",
+    "dependencies": {
+        "axios": "^0.19.0",
+        "commander": "^4.0.0",
+        "express": "^4.17.1",
+        "html-pdf": "^2.2.0",
+        "inquirer": "^7.0.0",
+        "stack": "^0.1.0"
+    }
 }
